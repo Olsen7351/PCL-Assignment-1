@@ -52,3 +52,6 @@ let getPrice (product: Product) =
     | Drink drink -> getDrinkPrice(drink)
     | Food  food  -> getFoodPrice(food)
     | Fruit fruit -> getFruitPrice(fruit)
+
+let gtgVAT (percent: int) (priceBeforeVAT: float) : float =
+    priceBeforeVAT * (1.0 + (float percent / 100.0))
