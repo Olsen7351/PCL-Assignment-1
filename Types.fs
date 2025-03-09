@@ -45,3 +45,32 @@ type FruitType =
 
 // Union type for fruits
 type Fruit = FruitItem of FruitType
+
+// Types for Orders and Customers
+
+type Product =
+    | Drink of Drink
+    | Food  of Food
+    | Fruit of Fruit
+
+type CustomerType =
+    | VIACustomer
+    | SOSUCustomer
+
+type PaymentType =
+    | VIACard
+    | CreditCard
+    | MobilePay
+
+type Order = {
+    Customer:    CustomerType
+    Payment:     PaymentType
+    Product:     Product
+    Quantity:    int
+}
+
+// Types for mailboxes
+
+type OrderProductMsg =
+    | Order of Order
+    | LeaveAComment of string

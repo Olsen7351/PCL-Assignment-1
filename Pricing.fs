@@ -46,3 +46,9 @@ let getFruitPrice (fruit: Fruit) =
     | FruitItem FruitType.Apple -> 5.0
     | FruitItem FruitType.Banana -> 4.0
     | FruitItem FruitType.Orange -> 6.0
+
+let getPrice (product: Product) =
+    match product with
+    | Drink drink -> getDrinkPrice(drink)
+    | Food  food  -> getFoodPrice(food)
+    | Fruit fruit -> getFruitPrice(fruit)
