@@ -9,6 +9,7 @@
   <ItemGroup>
     <Compile Include="Types.fs" />
     <Compile Include="Pricing.fs" />
+    <Compile Include="Agents.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 
